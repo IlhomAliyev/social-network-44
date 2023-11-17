@@ -14,12 +14,12 @@ body {
   color: var(--text-color);
 }
 
-button,
-input {
-  border: 1px solid transparent;
-  outline: 0;
-  font-family: inherit;
-}
+// button,
+// input {
+//   border: 1px solid transparent;
+//   outline: 0;
+//   font-family: inherit;
+// }
 
 a {
   text-decoration: none;
@@ -43,21 +43,21 @@ a {
   user-select: none; //? Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox
 }
 
-input {
-  padding: 12px 15px;
-  background-color: var(--bgc);
-  border-radius: 10px;
-  border: 1px solid transparent;
+// input {
+//   padding: 12px 15px;
+//   background-color: var(--bgc);
+//   border-radius: 10px;
+//   border: 1px solid transparent;
 
-  transition: 200ms;
+//   transition: 200ms;
 
-  &:is(:hover, :focus) {
-    border-color: var(--prime-color);
-  }
-}
+//   &:is(:hover, :focus) {
+//     border-color: var(--prime-color);
+//   }
+// }
 
-@media (max-width: 730px) {
-  input, button {
-    padding: 10px 12px;
-  }
-}
+// @media (max-width: 730px) {
+//   input, button {
+//     padding: 10px 12px;
+//   }
+// }

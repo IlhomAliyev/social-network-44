@@ -1,33 +1,41 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 type StyledButtonProps = {
-  isPrimary?: boolean,
-  isSecondary?: boolean
-}
+  $isPrimary?: boolean;
+  isSecondary?: boolean;
+};
 
 export const StyledButton = styled.button<StyledButtonProps>`
   cursor: pointer;
   padding: 12px 15px;
   font-size: inherit;
   border-radius: 10px;
-  background-color: ${(props) => props.theme.colors.primeColor};
+
+  border: 1px solid transparent;
+  outline: 0;
+  font-family: inherit;
+
   color: white;
   transition: 200ms;
   width: 100%;
   margin-bottom: 30px;
 
-  ${(props) => props.isPrimary && `
-    background-color: var(--prime-color);
-    color: white;
-  `}
+  ${(props) =>
+    props.$isPrimary &&
+    css`
+      background-color: ${(props) => props.theme.colors.primeColor};
+      color: white;
+    `}
 
-  ${(props) => props.isSecondary && `
-    background-color: var(--light-gray);
-    color: var(--placeholder-color);
-  `}
+  ${(props) =>
+    props.isSecondary &&
+    css`
+      background-color: ${(props) => props.theme.colors.lightGray};
+      color: ${(props) => props.theme.colors.placeholderColor};
+    `}
 
   &:disabled {
-    background-color: var(--disabled-bgc);
+    background-color: ${(props) => props.theme.colors.disabledBgc};
   }
 
   &:disabled:hover {
@@ -45,4 +53,8 @@ export const StyledButton = styled.button<StyledButtonProps>`
     translate: 0 0;
     box-shadow: none;
   }
-`
+
+  @media (max-width: 730px) {
+    padding: 10px 12px;
+  }
+`;

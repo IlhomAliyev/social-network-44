@@ -1,10 +1,11 @@
 import React from "react";
 import "./MainPage.scss";
 import { Header } from "../../components/UI/Header/Header";
+import { Container } from "../../components/UI/Container/Container.style";
 
 export const MainPage = () => {
   return (
-    <div className="container">
+    <Container>
       <Header />
       <div className="MainPage">
         <aside className="LeftSide">
@@ -312,7 +313,10 @@ export const MainPage = () => {
                   </svg>
                   <span>История</span>
                 </div>
-                <img src="./img/users/andrey-kashirskiy.jpeg" alt="Add History" />
+                <img
+                  src="./img/users/andrey-kashirskiy.jpeg"
+                  alt="Add History"
+                />
               </div>
               <div className="History__item">
                 <img src="./img/history/poster-1.jpeg" alt="History Poster" />
@@ -724,6 +728,6 @@ export const MainPage = () => {
           </div>
         </aside>
       </div>
-    </div>
+    </Container>
   );
 };
