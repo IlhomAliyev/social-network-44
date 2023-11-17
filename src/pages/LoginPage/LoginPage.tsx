@@ -13,8 +13,18 @@ export const LoginPage = () => {
       <StyledLoginPage>
         <Heading headingText="Авторизация" />
         <form>
-          <Input isError={false} errorMessage="Ошибка!" type="tel" placeholder="Номер телефона" />
-          <Input isError={true} errorMessage="Неверный пароль!" type="password" placeholder="Пароль" />
+          <Input
+            isError={false}
+            errorMessage="Ошибка!"
+            type="tel"
+            placeholder="Номер телефона"
+          />
+          <Input
+            isError={true}
+            errorMessage="Неверный пароль!"
+            type="password"
+            placeholder="Пароль"
+          />
           <Button isPrimary buttonText="Войти" />
         </form>
         <StyledLink to="/" linkText="Забыли пароль?" />
