@@ -14,18 +14,8 @@ export const StyledRegistrationPage = styled.div`
     margin-bottom: 50px;
   }
 
-  input {
-    display: block;
-    width: 100%;
-    background-color: transparent;
-
-    /* &:last-child {
-      margin-bottom: 20px;
-    } */
-
-    &:is(:hover, :focus) {
-      border-color: ${(props) => props.theme.colors.primeColor};
-    }
+  .InputContainer {
+    margin-bottom: 20px;
   }
 
   a {
