@@ -1,10 +1,22 @@
+import { StyledLink } from "../Typography/StyledLink";
 import { StyledRegistrationInfo } from "./RegistrationInfo.style";
 
-export const RegistrationInfo = () => {
+interface IRegistrationInfoProps {
+  linkURL: string;
+  linkLabel: string;
+  question: string;
+}
+
+export const RegistrationInfo = ({
+  linkURL,
+  linkLabel,
+  question,
+}: IRegistrationInfoProps) => {
   return (
     <StyledRegistrationInfo>
       <span>
-        У вас нет аккаунта? <a href="#">Зарегистрироваться</a>
+        {`${question} `}
+        <StyledLink to={linkURL} linkText={linkLabel} />
       </span>
       <p>Войти с помощью</p>
       <div className="icons-wrapper">

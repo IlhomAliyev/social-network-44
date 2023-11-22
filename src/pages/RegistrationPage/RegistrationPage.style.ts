@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledLoginPage = styled.div`
+export const StyledRegistrationPage = styled.div`
   box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
   border-radius: 20px;
   background-color: ${(props) => props.theme.colors.elemsBgc};
@@ -17,7 +17,6 @@ export const StyledLoginPage = styled.div`
   input {
     display: block;
     width: 100%;
-    border: 2px solid ${(props) => props.theme.colors.disabledBgc};
     background-color: transparent;
 
     /* &:last-child {

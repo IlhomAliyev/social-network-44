@@ -1,11 +1,10 @@
-import React from "react";
+import { RegistrationInfo } from "../../components/RegistrationInfo/RegistrationInfo";
 import { Heading } from "../../components/Typography/Heading";
 import { StyledLink } from "../../components/Typography/StyledLink";
 import { Button } from "../../components/UI/Button/Button";
 import { Container } from "../../components/UI/Container/Container.style";
-import { RegistrationInfo } from "../../components/RegistrationInfo/RegistrationInfo";
-import { StyledLoginPage } from "./LoginPage.style";
 import { Input } from "../../components/UI/Input/Input";
+import { StyledLoginPage } from "./LoginPage.style";
 
 export const LoginPage = () => {
   return (
@@ -28,7 +27,11 @@ export const LoginPage = () => {
           <Button isPrimary buttonText="Войти" />
         </form>
         <StyledLink to="/" linkText="Забыли пароль?" />
-        <RegistrationInfo />
+        <RegistrationInfo
+          question="У вас нет аккаунта?"
+          linkLabel="Зарегистрироваться"
+          linkURL="/registration"
+        />
       </StyledLoginPage>
     </Container>
   );

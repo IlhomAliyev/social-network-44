@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { ErrorMessage, InputContainer, StyledInput } from "./Input.style";
 
 interface IInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -10,10 +11,16 @@ export const Input = ({
   placeholder,
   errorMessage,
   isError,
+  ...props
 }: IInputProps) => {
   return (
     <InputContainer>
-      <StyledInput type={type} placeholder={placeholder} />
+      <StyledInput
+        type={type}
+        $isError={isError}
+        placeholder={placeholder}
+        {...props}
+      />
       {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </InputContainer>
   );
